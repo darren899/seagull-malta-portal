@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Restricted Access · Seagull Maritime × Malta Compliance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/malta.css">
+</head>
+<body>
+    <main class="gate">
+        <div class="gate__card">
+            <img src="assets/img/seagull-white.svg" alt="Seagull Maritime" class="gate__logo">
+
+            <h1 class="gate__title">Restricted Access</h1>
+            <p class="gate__note">This portal is prepared for a specific audience.<br>Enter your access code to continue.</p>
+
+            <form id="gate-form" autocomplete="off">
+                <input
+                    type="text"
+                    id="gate-code"
+                    class="gate__input"
+                    placeholder="Access Code"
+                    autocomplete="off"
+                    autocapitalize="characters"
+                    spellcheck="false"
+                    required>
+                <button type="submit" class="gate__button">Enter Portal</button>
+                <div id="gate-error" class="gate__error">
+                    Code not recognised. Please check and try again.
+                </div>
+            </form>
+
+            <div class="gate__footer-mark">
+                Seagull Maritime · Confidential
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/gate.js"></script>
+</body>
+</html>

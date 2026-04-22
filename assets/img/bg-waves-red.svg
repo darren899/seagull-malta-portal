@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Red/yellow wavy background accent. Used as repeating background layer. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="none">
+  <g fill="none" stroke-width="3" stroke-linecap="round">
+    <path d="M -50,120 Q 200,40 400,120 T 800,120 T 1200,120 T 1650,120" stroke="#DD1D21" opacity="0.55"/>
+    <path d="M -50,160 Q 200,80 400,160 T 800,160 T 1200,160 T 1650,160" stroke="#FBCE07" opacity="0.45"/>
+    <path d="M -50,200 Q 200,120 400,200 T 800,200 T 1200,200 T 1650,200" stroke="#DD1D21" opacity="0.4"/>
+    <path d="M -50,240 Q 200,160 400,240 T 800,240 T 1200,240 T 1650,240" stroke="#FBCE07" opacity="0.35"/>
+    <path d="M -50,280 Q 200,200 400,280 T 800,280 T 1200,280 T 1650,280" stroke="#DD1D21" opacity="0.3"/>
+    <path d="M -50,320 Q 200,240 400,320 T 800,320 T 1200,320 T 1650,320" stroke="#FBCE07" opacity="0.25"/>
+  </g>
+</svg>

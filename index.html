@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Seagull Maritime · Malta Compliance Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/malta.css">
+    <style>
+        /* Hero logo stage hidden on mobile */
+        @media (max-width: 860px) {
+            .hero__visual { display: none !important; }
+            .hero__inner { grid-template-columns: 1fr !important; }
+        }
+        /* Malta hero treatment — 8-pointed cross silhouette as visual anchor */
+        .malta-mark {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            opacity: 0.85;
+            filter: drop-shadow(0 0 24px rgba(0, 60, 114, 0.4));
+        }
+    </style>
+</head>
+<body>
+    <!-- Gate enforcement -->
+    <script src="assets/js/gate.js"></script>
+    <script>window.MaltaGate && window.MaltaGate.enforce();</script>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="index.html" class="site-header__logo" aria-label="Seagull Maritime">
+                <img src="assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </a>
+            <div class="site-header__prepared-for">
+                <span class="eyebrow" style="padding-left:0;">Malta · 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero__bg-accent"></div>
+        <div class="hero__bars"></div>
+        <div class="hero__bars-2"></div>
+        <div class="container hero__inner">
+            <div class="hero__text">
+                <span class="eyebrow">Voluntary Compliance Pack · 2026</span>
+                <h1 class="hero__title">Ready for<br>Malta.</h1>
+                <p class="hero__tagline">
+                    A single, organised home for everything the Licensing Board
+                    would expect to see — prepared proactively, available on request,
+                    ready for interim recognition or formal review.
+                </p>
+                <dl class="hero__meta">
+                    <div>
+                        <dt>Prepared by</dt>
+                        <dd>Seagull Maritime</dd>
+                    </div>
+                    <div>
+                        <dt>For the attention of</dt>
+                        <dd>Transport Malta · Licensing Board</dd>
+                    </div>
+                    <div>
+                        <dt>Framework</dt>
+                        <dd>S.L. 480.05 Schedule</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="hero__visual">
+                <div class="hero__logo-stage">
+                    <!-- Maltese cross + compass — subtle, institutional -->
+                    <svg class="malta-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="mc-grad" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#2E6BB8"/>
+                                <stop offset="100%" stop-color="#003C72"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- 8-pointed Maltese cross (stylised) -->
+                        <g fill="url(#mc-grad)" stroke="#3399CC" stroke-width="1.5" stroke-linejoin="round">
+                            <polygon points="100,20 115,60 140,45 125,80 160,85 125,100 140,140 115,130 100,170 85,130 60,140 75,100 40,85 75,80 60,45 85,60"/>
+                        </g>
+                        <!-- Outer compass ring -->
+                        <circle cx="100" cy="100" r="92" fill="none" stroke="#3399CC" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.55"/>
+                        <!-- Cardinal ticks -->
+                        <g stroke="#3399CC" stroke-width="1.2" opacity="0.7">
+                            <line x1="100" y1="4" x2="100" y2="14"/>
+                            <line x1="100" y1="186" x2="100" y2="196"/>
+                            <line x1="4" y1="100" x2="14" y2="100"/>
+                            <line x1="186" y1="100" x2="196" y2="100"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections -->
+    <section class="section">
+        <div class="container">
+            <div class="section__head">
+                <span class="accent-bar"></span>
+                <h2>What's inside</h2>
+                <p>Six sections, each mapped to an element of the S.L. 480.05 Schedule — so a Licensing Board reviewer can see, at a glance, that every statutory touchpoint has been thought about, evidenced, and kept live.</p>
+            </div>
+
+            <div class="cards">
+
+                <a href="approach/index.html" class="card">
+                    <div class="card__index">01 · Approach</div>
+                    <div class="card__title">Our Approach</div>
+                    <div class="card__body">
+                        Who we are, how we operate in Malta, and why we have chosen to prepare this pack voluntarily — ahead of any formal request.
+                    </div>
+                    <div class="card__cta">Open section</div>
+                </a>
+
+                <a href="standing/index.html" class="card">
+                    <div class="card__index">02 · Standing</div>
+                    <div class="card__title">Corporate Standing &amp; Insurance</div>
+                    <div class="card__body">
+                        Maltese incorporation, ownership structure, certified insurance policies, and the general corporate record required by the Schedule.
+                    </div>
+                    <div class="card__cta">Open section</div>
+                </a>
+
+                <a href="systems/index.html" class="card">
+                    <div class="card__index">03 · Systems</div>
+                    <div class="card__title">Management Systems</div>
+                    <div class="card__body">
+                        ISO 28007, 9001, 28000, 45001 and 18788 alignment — the QMS / RMS evidence the Schedule expects to see from an internationally-recognised accreditation body.
+                    </div>
+                    <div class="card__cta">Open section</div>
+                </a>
+
+                <a href="procedures/index.html" class="card">
+                    <div class="card__index">04 · Procedures</div>
+                    <div class="card__title">SOPs &amp; Rules on Use of Force</div>
+                    <div class="card__body">
+                        Standard Operating Procedures, Rules on the Use of Force, and operational controls for PCASP teams deployed from Malta-licensed engagements.
+                    </div>
+                    <div class="card__cta">Open section</div>
+                </a>
+
+                <a href="personnel/index.html" class="card">
+                    <div class="card__index">05 · Personnel</div>
+                    <div class="card__title">Personnel &amp; PCASP</div>
+                    <div class="card__body">
+                        Qualifications, training, competence records and the PCASP roster — available on request, evidencing every operator deployed under Maltese scope.
+                    </div>
+                    <div class="card__cta">Open section</div>
+                </a>
+
+                <a href="live.html" class="card">
+                    <div class="card__index">06 · Live</div>
+                    <div class="card__title">Ongoing Updates</div>
+                    <div class="card__body">
+                        A living feed of document updates, new releases and compliance movements — so the Licensing Board always sees the latest, not a snapshot.
+                    </div>
+                    <div class="card__cta">See latest</div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__mark">
+                <img src="assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </div>
+            <div class="site-footer__tag">
+                Your Watch.
+                <strong>Our Standard.</strong>
+            </div>
+            <div class="site-footer__meta">
+                Confidential · Prepared for Transport Malta Licensing Board · 2026
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

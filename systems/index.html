@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Management Systems · Seagull Maritime · Malta Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/malta.css">
+    <style>
+        .iso-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .iso-card {
+            padding: 1.75rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        .iso-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--malta-primary), var(--malta-accent));
+        }
+        .iso-card__std {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--malta-accent);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.2rem;
+        }
+        .iso-card__name {
+            font-family: var(--font-display);
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+        .iso-card__body {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 0.9rem;
+        }
+        .iso-card__status {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--malta-primary-bright);
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--surface-border);
+        }
+
+        .evidence-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .evidence-table th,
+        .evidence-table td {
+            padding: 0.85rem 1.1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--surface-border);
+            font-size: 0.9rem;
+        }
+        .evidence-table th {
+            background: var(--surface-raised);
+            font-family: var(--font-display);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.72rem;
+            color: var(--malta-accent);
+        }
+        .evidence-table tr:last-child td { border-bottom: none; }
+        .evidence-table td:first-child { color: var(--text-primary); font-weight: 600; }
+
+        .schedule-tag {
+            display: inline-block;
+            padding: 0.2rem 0.55rem;
+            background: rgba(0, 60, 114, 0.35);
+            border: 1px solid var(--malta-accent);
+            border-radius: 3px;
+            font-family: var(--font-display);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--malta-accent);
+        }
+
+        .note-block {
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 1.25rem 1.5rem;
+            background: rgba(0, 60, 114, 0.12);
+            border-left: 3px solid var(--malta-primary);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            font-size: 0.93rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <script src="../assets/js/gate.js"></script>
+    <script>window.MaltaGate && window.MaltaGate.enforce();</script>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-header__logo" aria-label="Seagull Maritime">
+                <img src="../assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </a>
+            <div class="site-header__prepared-for">
+                <span class="eyebrow" style="padding-left:0;">Malta · 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section--tight">
+        <div class="container">
+            <div class="section__head">
+                <span class="accent-bar"></span>
+                <div class="eyebrow">03 · Systems</div>
+                <h2>Management Systems</h2>
+                <p>The S.L. 480.05 Schedule expects a Quality Management System and a Risk Management System issued by an internationally-recognised accreditation body. Seagull Maritime operates against the full suite of standards a sophisticated buyer of armed maritime security would expect to see.</p>
+            </div>
+
+            <p style="text-align:center; margin-bottom: 1rem;">
+                <span class="schedule-tag">Schedule Reference · QMS / RMS Accreditation</span>
+            </p>
+
+            <div class="iso-grid">
+                <div class="iso-card">
+                    <div class="iso-card__std">ISO 28007-1</div>
+                    <div class="iso-card__name">PCASP Standard</div>
+                    <div class="iso-card__body">The international standard specifically for providers of privately contracted armed security personnel on ships. The core industry benchmark.</div>
+                    <div class="iso-card__status">Aligned · Group Certification Underway</div>
+                </div>
+                <div class="iso-card">
+                    <div class="iso-card__std">ISO 18788</div>
+                    <div class="iso-card__name">Management System for Private Security Operations</div>
+                    <div class="iso-card__body">The umbrella standard for private security operations, incorporating human rights, ICoCA and Montreux Document obligations.</div>
+                    <div class="iso-card__status">Aligned</div>
+                </div>
+                <div class="iso-card">
+                    <div class="iso-card__std">ISO 9001</div>
+                    <div class="iso-card__name">Quality Management System</div>
+                    <div class="iso-card__body">The Schedule's QMS requirement. Delivered as part of an integrated group management system across all entities.</div>
+                    <div class="iso-card__status">Aligned</div>
+                </div>
+                <div class="iso-card">
+                    <div class="iso-card__std">ISO 28000</div>
+                    <div class="iso-card__name">Security &amp; Supply Chain Management</div>
+                    <div class="iso-card__body">Security management across operations and supply chain — vetting, providers, logistics and weapons handling.</div>
+                    <div class="iso-card__status">Aligned</div>
+                </div>
+                <div class="iso-card">
+                    <div class="iso-card__std">ISO 45001</div>
+                    <div class="iso-card__name">Occupational Health &amp; Safety</div>
+                    <div class="iso-card__body">The group's occupational health and safety management system. Stage 1 audit scheduled 21 April 2026 (Libero).</div>
+                    <div class="iso-card__status">Stage 1 Booked · April 2026</div>
+                </div>
+                <div class="iso-card">
+                    <div class="iso-card__std">Integrated</div>
+                    <div class="iso-card__name">Group Management System</div>
+                    <div class="iso-card__body">Not five systems running in parallel — one integrated management system with a single document register, one NCR / OFI / CAPA register, one reconciliation matrix.</div>
+                    <div class="iso-card__status">Live</div>
+                </div>
+            </div>
+
+            <div class="note-block">
+                <strong style="color:var(--text-primary);">What "integrated" means in practice.</strong> Every policy, procedure and register is coded under a single group referencing system (<em>SM / System / Type / Sequence</em>), with cross-references between standards tracked in a live reconciliation matrix. When the Licensing Board asks "show us how your risk management system works" the answer is not a pointer to a folder — it is a live procedure that shows how risk is identified, assessed, treated and reviewed across health &amp; safety, security, and business operations in one flow.
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="container">
+            <div class="section__head">
+                <span class="accent-bar"></span>
+                <h2>Evidence on file</h2>
+                <p>Core management system documentation — available on request.</p>
+            </div>
+
+            <table class="evidence-table">
+                <thead>
+                    <tr>
+                        <th>Document</th>
+                        <th>Reference</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Group Security Management Policy</td>
+                        <td>SM/SEC/POL/001</td>
+                        <td>Top-level policy — ISO 18788 / 28007 / 28000 integration</td>
+                    </tr>
+                    <tr>
+                        <td>Occupational Health &amp; Safety Policy</td>
+                        <td>SM/HSE/POL/001</td>
+                        <td>ISO 45001 top-level policy</td>
+                    </tr>
+                    <tr>
+                        <td>Quality Policy</td>
+                        <td>SM/QMS/POL/001</td>
+                        <td>ISO 9001 top-level policy</td>
+                    </tr>
+                    <tr>
+                        <td>Context of the Organisation</td>
+                        <td>SM/INT/DOC/002</td>
+                        <td>Issues, interested parties, scope — ISO 9001 / 14001 / 45001 Cl. 4</td>
+                    </tr>
+                    <tr>
+                        <td>Combined Work Programme</td>
+                        <td>SM/INT/CMP/002 v2.0</td>
+                        <td>Master programme linking 45001 clauses, Shell findings, group objectives</td>
+                    </tr>
+                    <tr>
+                        <td>Document Register</td>
+                        <td>SM/INT/REG/001 v2.4</td>
+                        <td>Single source of truth for the entire group document estate</td>
+                    </tr>
+                    <tr>
+                        <td>Reconciliation Matrix</td>
+                        <td>SM/INT/REG/005</td>
+                        <td>Cross-reference between every tracked item across every register</td>
+                    </tr>
+                    <tr>
+                        <td>NCR / OFI / CAPA Register</td>
+                        <td>SM/INT/REG/004</td>
+                        <td>All findings (Shell, internal audits, incidents) tracked through to closure</td>
+                    </tr>
+                    <tr>
+                        <td>Legal &amp; Regulatory Requirements Register</td>
+                        <td>SM/HSE/REG/002 v1.1</td>
+                        <td>37 instruments across 5 jurisdictions, mapped to ISO clauses</td>
+                    </tr>
+                    <tr>
+                        <td>Interested Parties Register</td>
+                        <td>SM/HSE/REG/001</td>
+                        <td>Stakeholders and their requirements</td>
+                    </tr>
+                    <tr>
+                        <td>Company Objectives Register</td>
+                        <td>SM/INT/REG/006</td>
+                        <td>32 SMART objectives across HSE / SEC / QMS / INT</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__mark">
+                <img src="../assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </div>
+            <div class="site-footer__tag">
+                Your Watch.
+                <strong>Our Standard.</strong>
+            </div>
+            <div class="site-footer__meta">
+                Confidential · Prepared for Transport Malta Licensing Board · 2026
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

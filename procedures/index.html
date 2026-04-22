@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SOPs &amp; Rules on Use of Force · Seagull Maritime · Malta Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/malta.css">
+    <style>
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .family {
+            padding: 1.75rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        .family::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--malta-primary);
+        }
+        .family__label {
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--malta-accent);
+            margin-bottom: 0.4rem;
+        }
+        .family__title {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.7rem;
+            line-height: 1.3;
+        }
+        .family__body {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 0.8rem;
+        }
+        .family__count {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--malta-primary-bright);
+            padding-top: 0.6rem;
+            border-top: 1px solid var(--surface-border);
+        }
+
+        .evidence-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .evidence-table th,
+        .evidence-table td {
+            padding: 0.85rem 1.1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--surface-border);
+            font-size: 0.9rem;
+        }
+        .evidence-table th {
+            background: var(--surface-raised);
+            font-family: var(--font-display);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.72rem;
+            color: var(--malta-accent);
+        }
+        .evidence-table tr:last-child td { border-bottom: none; }
+        .evidence-table td:first-child { color: var(--text-primary); font-weight: 600; font-family: var(--font-display); font-size: 0.85rem; }
+
+        .schedule-tag {
+            display: inline-block;
+            padding: 0.2rem 0.55rem;
+            background: rgba(0, 60, 114, 0.35);
+            border: 1px solid var(--malta-accent);
+            border-radius: 3px;
+            font-family: var(--font-display);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--malta-accent);
+        }
+
+        .ruf-block {
+            margin: 2rem 0;
+            padding: 1.75rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 60, 114, 0.15), rgba(51, 153, 204, 0.08));
+            border: 1px solid var(--malta-accent);
+            border-radius: var(--radius-lg);
+        }
+        .ruf-block__head {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--malta-accent);
+            margin-bottom: 0.6rem;
+        }
+        .ruf-block__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .ruf-block__body {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.98rem;
+        }
+        .ruf-block__body strong { color: var(--text-primary); font-weight: 600; }
+
+        .note-block {
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 1.25rem 1.5rem;
+            background: rgba(0, 60, 114, 0.12);
+            border-left: 3px solid var(--malta-primary);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            font-size: 0.93rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <script src="../assets/js/gate.js"></script>
+    <script>window.MaltaGate && window.MaltaGate.enforce();</script>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-header__logo" aria-label="Seagull Maritime">
+                <img src="../assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </a>
+            <div class="site-header__prepared-for">
+                <span class="eyebrow" style="padding-left:0;">Malta · 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section--tight">
+        <div class="container">
+            <div class="section__head">
+                <span class="accent-bar"></span>
+                <div class="eyebrow">04 · Procedures</div>
+                <h2>SOPs &amp; Rules on Use of Force</h2>
+                <p>The S.L. 480.05 Schedule requires that the Licensing Board can review a company's Standard Operating Procedures. Ours are written, issued, version-controlled, trained against, and reviewed on a rolling cycle.</p>
+            </div>
+
+            <p style="text-align:center; margin-bottom: 1rem;">
+                <span class="schedule-tag">Schedule Reference · Standard Operating Procedures</span>
+            </p>
+
+            <div class="family-grid">
+                <div class="family">
+                    <div class="family__label">Region</div>
+                    <div class="family__title">Indian Ocean Region SOP</div>
+                    <div class="family__body">SM/OPS/SOP/001 · Main SOP plus eight annexes (A–H) covering deployment, embarkation, transit, citadel, armoury, weapons handling, counter-piracy and disembarkation.</div>
+                    <div class="family__count">9 documents · VPSHR-integrated</div>
+                </div>
+                <div class="family">
+                    <div class="family__label">Region</div>
+                    <div class="family__title">West Africa / Gulf of Guinea SOP</div>
+                    <div class="family__body">SM/OPS/SOP/002 · Security Escort Vessel operations procedure including MSLO Annex. Reflects Nigerian Navy MOU and WAF operating environment.</div>
+                    <div class="family__count">2 documents · VPSHR-integrated</div>
+                </div>
+                <div class="family">
+                    <div class="family__label">Governance</div>
+                    <div class="family__title">Rules on the Use of Force</div>
+                    <div class="family__body">SM/OPS/PRO/001 · Group RUF with five supporting form annexes — RUF Card, Statements of Understanding, Release Authorisation, Incident Report.</div>
+                    <div class="family__count">6 documents</div>
+                </div>
+                <div class="family">
+                    <div class="family__label">Specialist Procedures</div>
+                    <div class="family__title">Specialist Operating Procedures</div>
+                    <div class="family__body">Test firing, weapons handling and discharge reporting procedures — governing every scenario where firearms may be made ready or used.</div>
+                    <div class="family__count">SM/OPS/PRO/002 · SM/OPS/FORM/018–019</div>
+                </div>
+                <div class="family">
+                    <div class="family__label">TL Operational Forms</div>
+                    <div class="family__title">Team Leader Forms 006–017</div>
+                    <div class="family__body">Twelve operational forms covering the deployment-to-disembark lifecycle — briefings, handovers, reports, declarations, post-task reviews.</div>
+                    <div class="family__count">12 forms · 2026 rebuild</div>
+                </div>
+                <div class="family">
+                    <div class="family__label">Risk &amp; H&amp;S</div>
+                    <div class="family__title">Risk Assessments &amp; Method Statements</div>
+                    <div class="family__body">Nine core H&amp;S risk assessments (144 hazards total), matched by plain-English BRAGs, method statements, and security/business RAs under ISO 18788.</div>
+                    <div class="family__count">9 RAs · 10 BRAGs · Growing MS library</div>
+                </div>
+            </div>
+
+            <div class="ruf-block">
+                <div class="ruf-block__head">Position statement</div>
+                <div class="ruf-block__title">On the Rules on the Use of Force</div>
+                <div class="ruf-block__body">
+                    Seagull Maritime's <strong>Rules on the Use of Force</strong> (SM/OPS/PRO/001) is a group-authored procedure, not a derivative of any legacy industry model. It is built on the Voluntary Principles on Security &amp; Human Rights, the International Code of Conduct for Private Security Service Providers (ICoCA), and the Montreux Document. It is the principal governance instrument for every armed deployment, supported by RUF training for every PCASP, and reinforced by pre-deployment briefings, signed Statements of Understanding, and post-incident reporting discipline.
+                </div>
+            </div>
+
+            <div class="note-block">
+                <strong style="color:var(--text-primary);">Release of operational documents.</strong> SOPs and the RUF are operationally sensitive and are not distributed beyond client and authorised regulator channels. Where the Licensing Board wishes to review a particular SOP, procedure, or annex, we will provide read-only access or a hard copy under the usual confidentiality terms — promptly and without gatekeeping.
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight">
+        <div class="container">
+            <div class="section__head">
+                <span class="accent-bar"></span>
+                <h2>Core procedures referenced above</h2>
+                <p>The full index is held in the Document Register (SM/INT/REG/001). This is the short list most relevant to a licensing review.</p>
+            </div>
+
+            <table class="evidence-table">
+                <thead>
+                    <tr>
+                        <th>Ref</th>
+                        <th>Title</th>
+                        <th>Scope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>SM/OPS/SOP/001</td><td>Standard Operating Procedures — Indian Ocean</td><td>Main SOP (IOR)</td></tr>
+                    <tr><td>SM/OPS/SOP/001-A to H</td><td>IOR SOP Annexes A–H</td><td>Deployment → Disembarkation</td></tr>
+                    <tr><td>SM/OPS/SOP/002</td><td>WAF SEV Operations</td><td>West Africa / Gulf of Guinea</td></tr>
+                    <tr><td>SM/OPS/SOP/002-A</td><td>MSLO Annex</td><td>Maritime Security Liaison Officer</td></tr>
+                    <tr><td>SM/OPS/PRO/001</td><td>Rules on the Use of Force</td><td>Group RUF procedure</td></tr>
+                    <tr><td>SM/OPS/PRO/002</td><td>Test Fire Procedure</td><td>Weapons readiness &amp; test firing</td></tr>
+                    <tr><td>SM/OPS/FORM/001–005</td><td>RUF Annex Forms</td><td>RUF Card, SoUs, Release Auth, Incident Report</td></tr>
+                    <tr><td>SM/OPS/FORM/006–017</td><td>TL Operational Forms</td><td>Deployment lifecycle documentation</td></tr>
+                    <tr><td>SM/OPS/FORM/018</td><td>Test Fire Authorisation</td><td>Specialist authorisation</td></tr>
+                    <tr><td>SM/OPS/FORM/019</td><td>Weapons Discharge Report</td><td>Post-discharge reporting</td></tr>
+                    <tr><td>SM/HSE/PRO/001</td><td>Hazard Identification &amp; Risk Assessment</td><td>H&amp;S risk management procedure</td></tr>
+                    <tr><td>SM/SEC/PRO/001</td><td>Security &amp; Business Risk Assessment</td><td>ISO 18788 risk process</td></tr>
+                    <tr><td>SM/INT/PRO/006</td><td>Incident &amp; Crisis Management</td><td>Including armed response escalation</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__mark">
+                <img src="../assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </div>
+            <div class="site-footer__tag">
+                Your Watch.
+                <strong>Our Standard.</strong>
+            </div>
+            <div class="site-footer__meta">
+                Confidential · Prepared for Transport Malta Licensing Board · 2026
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

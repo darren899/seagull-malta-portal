@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Live Updates · Seagull Maritime · Malta Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/malta.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 920px;
+            margin: 2rem auto 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--malta-primary), var(--malta-accent), transparent);
+        }
+        .tl-phase {
+            margin-bottom: 2.5rem;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        .tl-phase::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--malta-accent);
+            box-shadow: 0 0 0 4px rgba(51, 153, 204, 0.18);
+        }
+        .tl-phase--current::before {
+            background: #FFA500;
+            box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.25), 0 0 16px rgba(255, 165, 0, 0.4);
+        }
+        .tl-phase__head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .tl-phase__date {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--malta-accent);
+        }
+        .tl-phase__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.25;
+        }
+        .tl-phase__summary {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            line-height: 1.65;
+            margin-bottom: 0.9rem;
+        }
+
+        .tl-events {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tl-event {
+            padding: 0.8rem 1rem;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius);
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .tl-event__tag {
+            flex-shrink: 0;
+            padding: 0.18rem 0.5rem;
+            font-family: var(--font-display);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 3px;
+        }
+        .tl-event__tag--new { background: rgba(51, 153, 204, 0.2); color: var(--malta-accent); border: 1px solid var(--malta-accent); }
+        .tl-event__tag--update { background: rgba(46, 107, 184, 0.22); color: var(--malta-primary-bright); border: 1px solid var(--malta-primary-bright); }
+        .tl-event__tag--milestone { background: rgba(255, 165, 0, 0.15); color: #FFC266; border: 1px solid #FFA500; }
+        .tl-event__tag--audit { background: rgba(220, 80, 80, 0.12); color: #E08585; border: 1px solid #C05050; }
+        .tl-event__body { color: var(--text-secondary); }
+        .tl-event__body strong { color: var(--text-primary); font-weight: 600; }
+
+        .notice-strip {
+            max-width: 920px;
+            margin: 2rem auto 0;
+            padding: 1.25rem 1.5rem;
+            background: rgba(0, 60, 114, 0.18);
+            border: 1px solid var(--malta-primary-bright);
+            border-radius: var(--radius-lg);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .notice-strip__icon {
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--malta-accent);
+            padding: 0.4rem 0.75rem;
+            background: var(--malta-primary);
+            border-radius: 3px;
+        }
+        .notice-strip__body {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.55;
+            flex: 1;
+            min-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <script src="assets/js/gate.js"></script>
+    <script>window.MaltaGate && window.MaltaGate.enforce();</script>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="index.html" class="site-header__logo" aria-label="Seagull Maritime">
+                <img src="assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </a>
+            <div class="site-header__prepared-for">
+                <span class="eyebrow" style="padding-left:0;">Malta · 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section--tight">
+        <div class="container">
+            <div class="section__head">
+                <span class="accent-bar"></span>
+                <div class="eyebrow">06 · Live</div>
+                <h2>Ongoing Updates</h2>
+                <p>A rolling record of the most recent compliance movements across the group — new documents, updated procedures, audit activity, and evidence pack refreshes. Updated weekly.</p>
+            </div>
+
+            <div class="notice-strip">
+                <div class="notice-strip__icon">Evergreen</div>
+                <div class="notice-strip__body">
+                    This page shows movement within the last month. For the full archive (the Document Register, the Combined Work Programme, NCR / OFI / CAPA Register and Reconciliation Matrix), request via the email address in the footer.
+                </div>
+            </div>
+
+            <div class="timeline">
+
+                <div class="tl-phase tl-phase--current">
+                    <div class="tl-phase__head">
+                        <div class="tl-phase__title">This week — 20 April 2026 onwards</div>
+                        <div class="tl-phase__date">Active</div>
+                    </div>
+                    <div class="tl-phase__summary">
+                        Malta portal stood up. Pre-emptive preparation while the group's ISO 45001 Stage 1 audit (Libero) runs in Athens Tuesday 21 April.
+                    </div>
+                    <ul class="tl-events">
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>Malta Compliance Portal</strong> — voluntary pack mapped to S.L. 480.05 Schedule, stood up for the Licensing Board.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--audit">Audit</span>
+                            <span class="tl-event__body"><strong>ISO 45001 Stage 1 (Libero)</strong> — Athens, Tuesday 21 April 2026. Group certification with Maltese entity annex.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--update">Update</span>
+                            <span class="tl-event__body"><strong>Legal &amp; Regulatory Requirements Register (SM/HSE/REG/002)</strong> — v1.0 → v1.1. 5 dropdowns, 72 ISO clause cells, 45 issue date cells populated across 37 instruments.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tl-phase">
+                    <div class="tl-phase__head">
+                        <div class="tl-phase__title">Last week — 13 to 19 April</div>
+                        <div class="tl-phase__date">Completed</div>
+                    </div>
+                    <div class="tl-phase__summary">
+                        Group policy cascade, campaign launch, Shell audit response submitted and Vitol WAF due diligence cleared.
+                    </div>
+                    <ul class="tl-events">
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--milestone">Milestone</span>
+                            <span class="tl-event__body"><strong>Shell Audit Response submitted</strong> — portal-based response to Shell MS Team. 72 findings closed out, live evidence feed.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--milestone">Milestone</span>
+                            <span class="tl-event__body"><strong>Vitol WAF Due Diligence cleared</strong> — LSC confirmed no further questions. No onsite verification required.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>Three new group policies</strong> — ESG (SM/INT/POL/011), Sanctions (SM/INT/POL/012), Conflict of Interest (SM/INT/POL/013). Mirror policies issued for the sister Vanguard entity.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>Conflict of Interest Register</strong> (SM/INT/REG/011) stood up. 19 columns, live declarations.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>KYC Framework tool</strong> launched on the compliance platform — 10-section pattern for Finance-led client onboarding.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--update">Update</span>
+                            <span class="tl-event__body"><strong>Drugs &amp; Alcohol Policy (SM/INT/POL/010)</strong> — format-aligned reissue to group standard template.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tl-phase">
+                    <div class="tl-phase__head">
+                        <div class="tl-phase__title">Earlier this month — 1 to 12 April</div>
+                        <div class="tl-phase__date">Completed</div>
+                    </div>
+                    <div class="tl-phase__summary">
+                        ISO 45001 gap closure, SOP annex series, training suite and portal infrastructure build.
+                    </div>
+                    <ul class="tl-events">
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--milestone">Milestone</span>
+                            <span class="tl-event__body"><strong>All remaining ISO 45001 clause gaps closed</strong> — seven new procedures (RRA, Worker Consultation, Emergency Preparedness, Supplier &amp; Contractor, Monitoring &amp; Evaluation, Management Review, Continual Improvement).</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>Rules on the Use of Force (SM/OPS/PRO/001)</strong> — group RUF v1.0 issued with five form annexes (RUF Card, SoUs, Release Auth, Incident Report).</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>Indian Ocean SOP (SM/OPS/SOP/001)</strong> — main SOP plus Annexes A–H. VPSHR integration, BMP-MS alignment.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>21 LMS training courses</strong> live on the group learning platform — Human Rights / VPSHR, PCASP awareness, ISO 45001, Risk, Incident Reporting, Legal Compliance, Management Review.</span>
+                        </li>
+                        <li class="tl-event">
+                            <span class="tl-event__tag tl-event__tag--new">New</span>
+                            <span class="tl-event__body"><strong>Your Watch. Our Standard. campaign</strong> — awareness framework live at portals.seagullmaritimeltd.com/campaign/ with bulletins, BRAGs, compliance tools.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__mark">
+                <img src="assets/img/seagull-white.svg" alt="Seagull Maritime">
+            </div>
+            <div class="site-footer__tag">
+                Your Watch.
+                <strong>Our Standard.</strong>
+            </div>
+            <div class="site-footer__meta">
+                Confidential · Prepared for Transport Malta Licensing Board · 2026 · Updated weekly
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
