@@ -168,6 +168,143 @@ p { color: var(--text-secondary); }
     color: var(--text-muted);
 }
 
+/* ========== Back-to-home breadcrumb ==========
+   Sits directly below the site header on chapter pages.
+   Homepage (index.html) does not include this strip. */
+.page-back {
+    background: rgba(0, 60, 114, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.7rem 0;
+}
+.page-back__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.page-back__link {
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--malta-accent-bright);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+.page-back__link:hover {
+    color: #ffffff;
+    transform: translateX(-2px);
+}
+.page-back__arrow {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* ========== Inline VIEW button (used in evidence tables) ========== */
+.view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    background: rgba(51, 153, 204, 0.12);
+    border: 1px solid var(--malta-accent);
+    border-radius: 3px;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--malta-accent-bright);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.view-btn:hover {
+    background: var(--malta-accent);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+.view-btn__arrow {
+    font-size: 0.85rem;
+    line-height: 1;
+}
+.view-btn--muted {
+    color: var(--text-muted);
+    border-color: var(--surface-border);
+    background: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* ========== Integrated oversight banner (Section 03 Systems) ========== */
+.integrated-banner {
+    margin: 1.5rem 0 0;
+    padding: 1.75rem 2rem;
+    background:
+        linear-gradient(135deg, rgba(0, 60, 114, 0.45) 0%, rgba(46, 107, 184, 0.18) 100%);
+    border: 1px solid var(--malta-accent);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+.integrated-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--malta-primary), var(--malta-accent), var(--malta-accent-bright));
+}
+.integrated-banner__label {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--malta-accent-bright);
+    margin-bottom: 0.4rem;
+}
+.integrated-banner__title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+.integrated-banner__body {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* ========== ISO card "View certificate" link ========== */
+.iso-card__cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.7rem;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--malta-accent-bright);
+    text-decoration: none;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+.iso-card__cert-link:hover {
+    color: #ffffff;
+    transform: translateX(2px);
+}
+.iso-card__cert-link__arrow {
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
 /* ========== Hero ========== */
 .hero {
     position: relative;
@@ -185,7 +322,7 @@ p { color: var(--text-secondary); }
     pointer-events: none;
 }
 
-/* Wavy red + yellow accent band — the signature visual flourish.
+/* Wavy Malta-blue accent band — the signature visual flourish.
    Used in the hero (bottom half) and echoed in the section below.
    MASKED: the hero text column (left 55%) is cut out of the wave
    layer using a linear-gradient mask. Waves are therefore invisible

@@ -353,6 +353,15 @@
         </div>
     </header>
 
+    <nav class="page-back" aria-label="Breadcrumb">
+        <div class="page-back__inner">
+            <a href="../index.html" class="page-back__link">
+                <span class="page-back__arrow">&larr;</span>
+                <span>Back to home</span>
+            </a>
+        </div>
+    </nav>
+
     <section class="section section--tight">
         <div class="container">
             <div class="section__head">
@@ -400,29 +409,28 @@
             <div class="section__head">
                 <span class="accent-bar"></span>
                 <h2>The PCASP Roster</h2>
-                <p>A live, anonymised view of the PCASP pool deployed under Seagull Maritime's scope. Refreshed from the group operational system (1Clearview ERP) approximately every two weeks. Personal data (names, DOB, passport, contact) and operationally sensitive data (vessel assignments) are held internally and made available to the Licensing Board on request under confidentiality.</p>
+                <p>An anonymised snapshot of the PCASP pool deployed or booked under Seagull Maritime's scope. The roster changes daily as personnel rotate and tasks complete &mdash; this is a point-in-time view. Named roster, qualifications detail and deployment history would be made available as part of any formal licence application or approval, under confidentiality.</p>
             </div>
 
             <div class="refresh-stamp">
-                <span class="refresh-stamp__dot"></span>
-                <span>Last refreshed <strong id="refresh-date">&mdash;</strong> &middot; Source: <strong>1Clearview ERP</strong></span>
+                <span>Snapshot &middot; Current at time of issue</span>
             </div>
 
-            <div class="stat-row" id="stat-row">
+            <div class="stat-row">
                 <div class="stat">
-                    <div class="stat__num" id="stat-total">&mdash;</div>
+                    <div class="stat__num">175</div>
                     <div class="stat__label">PCASP in<br>Current Pool</div>
                 </div>
                 <div class="stat">
-                    <div class="stat__num" id="stat-deployed">&mdash;</div>
+                    <div class="stat__num">130</div>
                     <div class="stat__label">Currently<br>Deployed</div>
                 </div>
                 <div class="stat">
-                    <div class="stat__num" id="stat-booked">&mdash;</div>
+                    <div class="stat__num">45</div>
                     <div class="stat__label">Booked<br>Ashore</div>
                 </div>
                 <div class="stat">
-                    <div class="stat__num" id="stat-vax">&mdash;</div>
+                    <div class="stat__num">98.3%</div>
                     <div class="stat__label">Vaccination<br>Coverage</div>
                 </div>
             </div>
@@ -430,50 +438,62 @@
             <div class="breakdown-grid">
                 <div class="breakdown">
                     <div class="breakdown__title">By Nationality</div>
-                    <div id="bd-nationality"></div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Sri Lankan</div>
+                        <div class="bar-row__count">98 &middot; 56%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:56%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Indian</div>
+                        <div class="bar-row__count">62 &middot; 35%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Ukrainian</div>
+                        <div class="bar-row__count">12 &middot; 7%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:7%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Nepalese</div>
+                        <div class="bar-row__count">3 &middot; 2%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:2%"></div></div>
+                    </div>
                 </div>
                 <div class="breakdown">
                     <div class="breakdown__title">By Capability</div>
-                    <div id="bd-capability"></div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Team Member</div>
+                        <div class="bar-row__count">75 &middot; 43%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:43%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Team Leader Capable</div>
+                        <div class="bar-row__count">65 &middot; 37%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:37%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">RALL Specialist</div>
+                        <div class="bar-row__count">35 &middot; 20%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+                    </div>
                 </div>
                 <div class="breakdown">
                     <div class="breakdown__title">By Status</div>
-                    <div id="bd-status"></div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Deployed</div>
+                        <div class="bar-row__count">130 &middot; 74%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:74%"></div></div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-row__label">Booked Ashore</div>
+                        <div class="bar-row__count">45 &middot; 26%</div>
+                        <div class="bar-track"><div class="bar-fill" style="width:26%"></div></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="filter-row" id="filter-row">
-                <span class="filter-label">Filter</span>
-                <button class="filter-btn is-active" data-filter="status" data-value="all">All</button>
-                <button class="filter-btn" data-filter="status" data-value="IN TRANSIT">Deployed</button>
-                <button class="filter-btn" data-filter="status" data-value="BOOKED">Booked</button>
-                <span class="filter-label" style="margin-left: 0.8rem;">Nationality</span>
-                <button class="filter-btn is-active" data-filter="nationality" data-value="all">All</button>
-                <button class="filter-btn" data-filter="nationality" data-value="Sri Lankan">Sri Lankan</button>
-                <button class="filter-btn" data-filter="nationality" data-value="Indian">Indian</button>
-                <button class="filter-btn" data-filter="nationality" data-value="Ukrainian">Ukrainian</button>
-                <button class="filter-btn" data-filter="nationality" data-value="Nepalese">Nepalese</button>
-            </div>
-
-            <div class="roster-table-wrap">
-                <table class="roster-table">
-                    <thead>
-                        <tr>
-                            <th>Ref</th>
-                            <th>Nationality</th>
-                            <th>Capability</th>
-                            <th>Vaccinated</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="roster-body">
-                        <tr><td colspan="5" class="roster-loading">Loading roster&hellip;</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p style="text-align:center; font-size:0.82rem; color:var(--text-secondary); margin-top:1rem; font-style:italic;">
-                Named roster, qualifications detail, and deployment history available to the Licensing Board under confidentiality &mdash; contact
+            <p style="text-align:center; font-size:0.85rem; color:var(--text-secondary); margin-top:1.5rem;">
+                For specific enquiries in advance of a formal application, contact
                 <a href="mailto:darren@seagullsecurity.com" style="color:var(--malta-accent);">darren@seagullsecurity.com</a>.
             </p>
         </div>
@@ -493,53 +513,69 @@
                         <th>Document</th>
                         <th>Reference</th>
                         <th>Purpose</th>
+                        <th>View</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Training &amp; Competence Matrix</td>
-                        <td>SM/INT/REG/008</td>
-                        <td>21 courses &times; 3 role categories &times; personnel. Single source for deployment readiness.</td>
+                        <td>PCASP Recruitment &amp; Screening</td>
+                        <td>SM/INT/PRO/008</td>
+                        <td>The PCASP-specific recruitment, vetting and screening procedure &mdash; military / law enforcement service records, identity, sanctions, references.</td>
+                        <td><a href="../docs/personnel/SM-INT-PRO-008-PCASP-Recruitment-and-Screening.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
+                    </tr>
+                    <tr>
+                        <td>PCASP Induction &amp; Deployment</td>
+                        <td>SM/INT/PRO/007</td>
+                        <td>Pre-deployment induction, briefings, paperwork, tasking handover and operational readiness sign-off.</td>
+                        <td><a href="../docs/personnel/SM-INT-PRO-007-PCASP-Induction-and-Deployment.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Firearms Competency</td>
+                        <td>SM/INT/PRO/009</td>
+                        <td>Standards, assessment and ongoing verification of firearms competence for every armed PCASP.</td>
+                        <td><a href="../docs/personnel/SM-INT-PRO-009-Firearms-Competency.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
+                    </tr>
+                    <tr>
+                        <td>MSO Course Program</td>
+                        <td>SM/INT/DOC/006</td>
+                        <td>The Maritime Security Operations course program &mdash; the formal training pathway every PCASP follows.</td>
+                        <td><a href="../docs/personnel/SM-INT-DOC-006-MSO-Course-Program.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sample MSO Pack</td>
+                        <td>Training material exhibit</td>
+                        <td>Representative extract of the MSO course materials delivered to candidates &mdash; provided as a tangible exhibit of training quality.</td>
+                        <td><a href="../docs/personnel/Sample-MSO-Pack.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Staff Recruitment Procedure</td>
+                        <td>SM/INT/PRO/011</td>
+                        <td>Group-wide recruitment procedure for shore staff and management roles.</td>
+                        <td><a href="../docs/personnel/SM-INT-PRO-011-Staff-Recruitment-Procedure.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
                     </tr>
                     <tr>
                         <td>Staff Training &amp; Competence Procedure</td>
                         <td>SM/INT/PRO/012</td>
                         <td>The procedure governing onboarding, training, and competence verification.</td>
+                        <td><a href="../docs/personnel/SM-INT-PRO-012-Staff-Training-and-Competence-Procedure.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
                     </tr>
                     <tr>
-                        <td>Staff Recruitment Procedure</td>
-                        <td>SM/INT/PRO/011</td>
-                        <td>Vetting, screening, references, right to work, sanctions checks.</td>
-                    </tr>
-                    <tr>
-                        <td>New Starter Checklist</td>
-                        <td>SM/INT/FORM/002</td>
-                        <td>24-item, 4-phase onboarding checklist.</td>
-                    </tr>
-                    <tr>
-                        <td>LMS Course Catalogue</td>
-                        <td>SM/TRG/DOC/001&ndash;012</td>
-                        <td>Human Rights, PCASP MS Awareness, RA, Incident Reporting, Legal Compliance, Management Review, SOPs &amp; RUF, and nine others.</td>
+                        <td>Worker Consultation &amp; Participation</td>
+                        <td>SM/INT/PRO/014</td>
+                        <td>Two-way feedback loops for PCASP teams and shore personnel.</td>
+                        <td><a href="../docs/personnel/SM-INT-PRO-014-Worker-Consultation-and-Participation.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
                     </tr>
                     <tr>
                         <td>Human Rights Training &mdash; PCASP</td>
                         <td>SM/TRG/DOC/001</td>
-                        <td>UDHR / VPSHR / ICoCA three-layer training &mdash; mandatory.</td>
+                        <td>UDHR / VPSHR / ICoCA three-layer training &mdash; mandatory for every PCASP.</td>
+                        <td><a href="../docs/personnel/SM-TRG-DOC-001-Human-Rights-Training-PCASP.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
                     </tr>
                     <tr>
                         <td>Human Rights Training &mdash; Staff &amp; Management</td>
                         <td>SM/TRG/DOC/002</td>
                         <td>Oversight-perspective human rights course &mdash; mandatory for office staff.</td>
-                    </tr>
-                    <tr>
-                        <td>Roles, Responsibilities &amp; Authorities Procedure</td>
-                        <td>SM/INT/PRO/014</td>
-                        <td>Formal accountability map across group entities.</td>
-                    </tr>
-                    <tr>
-                        <td>Worker Consultation &amp; Participation</td>
-                        <td>SM/INT/PRO/015</td>
-                        <td>Two-way feedback loops for PCASP teams and shore personnel.</td>
+                        <td><a href="../docs/personnel/SM-TRG-DOC-002-Human-Rights-Training-Staff-and-Management.pdf" class="view-btn" target="_blank" rel="noopener"><span class="view-btn__arrow">&rarr;</span> View</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -560,118 +596,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-    (function () {
-        var state = {
-            roster: [],
-            filters: { status: 'all', nationality: 'all' }
-        };
-
-        function fmtDate(iso) {
-            if (!iso) return '—';
-            var d = new Date(iso + 'T00:00:00');
-            if (isNaN(d.getTime())) return iso;
-            return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
-        }
-
-        function renderBreakdown(containerId, obj, total) {
-            var el = document.getElementById(containerId);
-            if (!el) return;
-            el.innerHTML = '';
-            Object.keys(obj).forEach(function (k) {
-                var count = obj[k];
-                var pct = total ? Math.round(100 * count / total) : 0;
-                var row = document.createElement('div');
-                row.className = 'bar-row';
-                row.innerHTML =
-                    '<div class="bar-row__label">' + k + '</div>' +
-                    '<div class="bar-row__count">' + count + ' &middot; ' + pct + '%</div>' +
-                    '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>';
-                el.appendChild(row);
-            });
-        }
-
-        function renderStats(data) {
-            document.getElementById('refresh-date').textContent = fmtDate(data.last_updated);
-            document.getElementById('stat-total').textContent = data.total_records;
-            document.getElementById('stat-deployed').textContent = data.summary.by_status['IN TRANSIT'] || 0;
-            document.getElementById('stat-booked').textContent = data.summary.by_status['BOOKED'] || 0;
-            document.getElementById('stat-vax').textContent = (data.summary.vaccinated_pct || 0) + '%';
-            renderBreakdown('bd-nationality', data.summary.by_nationality, data.total_records);
-            renderBreakdown('bd-capability', data.summary.by_capability, data.total_records);
-            renderBreakdown('bd-status', data.summary.by_status, data.total_records);
-        }
-
-        function statusPill(s) {
-            if (s === 'IN TRANSIT') return '<span class="pill pill--deployed">Deployed</span>';
-            if (s === 'BOOKED') return '<span class="pill pill--booked">Booked</span>';
-            return '<span class="pill">' + s + '</span>';
-        }
-
-        function vaxPill(v) {
-            return v
-                ? '<span class="pill pill--vax">Vaccinated</span>'
-                : '<span class="pill pill--novax">Pending</span>';
-        }
-
-        function renderRoster() {
-            var tbody = document.getElementById('roster-body');
-            var rows = state.roster.filter(function (p) {
-                if (state.filters.status !== 'all' && p.status !== state.filters.status) return false;
-                if (state.filters.nationality !== 'all' && p.nationality !== state.filters.nationality) return false;
-                return true;
-            });
-            if (!rows.length) {
-                tbody.innerHTML = '<tr><td colspan="5" class="roster-empty">No records match the selected filters.</td></tr>';
-                return;
-            }
-            tbody.innerHTML = rows.map(function (p) {
-                return '<tr>' +
-                    '<td class="ref">' + p.ref + '</td>' +
-                    '<td>' + p.nationality + '</td>' +
-                    '<td>' + p.capability + '</td>' +
-                    '<td>' + vaxPill(p.vaccinated) + '</td>' +
-                    '<td>' + statusPill(p.status) + '</td>' +
-                '</tr>';
-            }).join('');
-        }
-
-        function wireFilters() {
-            var row = document.getElementById('filter-row');
-            row.addEventListener('click', function (ev) {
-                var btn = ev.target.closest('.filter-btn');
-                if (!btn) return;
-                var group = btn.getAttribute('data-filter');
-                var value = btn.getAttribute('data-value');
-                state.filters[group] = value;
-                row.querySelectorAll('.filter-btn[data-filter="' + group + '"]').forEach(function (b) {
-                    b.classList.toggle('is-active', b === btn);
-                });
-                renderRoster();
-            });
-        }
-
-        function load() {
-            fetch('./data/personnel-roster.json', { cache: 'no-cache' })
-                .then(function (r) {
-                    if (!r.ok) throw new Error('HTTP ' + r.status);
-                    return r.json();
-                })
-                .then(function (data) {
-                    state.roster = data.roster || [];
-                    renderStats(data);
-                    renderRoster();
-                })
-                .catch(function (err) {
-                    document.getElementById('roster-body').innerHTML =
-                        '<tr><td colspan="5" class="roster-empty">Roster temporarily unavailable &mdash; refreshing on the next cycle. Contact darren@seagullsecurity.com for a current extract.</td></tr>';
-                });
-        }
-
-        wireFilters();
-        load();
-    })();
-    </script>
 </body>
 </html>
